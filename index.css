@@ -299,21 +299,36 @@ header{
     color: #F4F4F4;
     background: #333;
     font: 10px;
-    padding: 10px 30px;
-    width: 100px;
+    padding: 10px 0px;
+    width: 60%;
     transition-duration: 0.5s;
+    margin-left: 10px;
+}
+.article-btn p{
+    margin-left: 10px;
 }
 .article-btn a{
     width: 100%;
+    font-size: 20px;
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: relative;
+    cursor: pointer;
 }
-.article-btn:hover {
-    background: #F4F4F4;
-    color: #333;
-    transition-duration: 0.5s;
+.article-btn svg{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translatey(-50%);
 }
+
 .article-btn-wrap{
     padding-top: 20px;
-    padding-left: 80%;
+    padding-left: 70%;
 }
 
 #activities{
