@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+.archive{
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 50px 0px;
+}
+
+/*-------------------------------*/
+.balloon-wrap_1{
+    overflow: hidden;
+    padding-right: 110px;
+}
+.balloon-wrap_2{
+    overflow: hidden;
+    padding-left: 110px;
+}
+
+/* バルーンをブロックで管理する為のラッピングクラス */
+/* ←吹き出し */
+.balloonL {
+    position: relative;
+    /* 絶対配置の基準宣言 */
+    display: inline-flex;
+    /* コンテンツのサイズによってバルーンサイズ変更 */
+    padding: 20px;
+    /* パディング領域 */
+    border-radius: 10px;
+    /* 吹き出しの角を丸く */
+    color: #010101;
+    /* コンテンツの色 */
+    background-color: #CCA43B;
+    /* バルーンの背景の色 */
+    margin-left: 110px;
+    /* 左に空けるスペース */
+    margin-bottom: 35px;
+    /* 下に空けるスペース */
+    margin-right: 20%;
+}
+
+.balloonL .iconL {
+    position: absolute;
+    /* 絶対配置宣言 */
+    left: -110px;
+    /* 左に空けたスペースににアイコンを表示 */
+    top: 0;
+    /* 頂点を合わせる */
+    width: 86px;
+    /* アイコンの幅 */
+    height: 86px;
+    /* アイコンの高さ */
+    border-radius: 50%;
+    /* 画像を丸くくり抜く */
+}
+.nameL{
+    position: absolute;
+    /* 絶対配置宣言 */
+    left: -110px;
+    /* 左に空けたスペースににアイコンを表示 */
+    top: 86px;
+    width: 86px;
+    font-size: 14px;
+    text-align: center;
+}
+.balloonL::before {
+    /* 吹き出しの三角形作成 */
+    content: '';
+    /* 文字は空欄 */
+    position: absolute;
+    /* 絶対配置宣言 */
+    display: block;
+    width: 0;
+    height: 0;
+    left: -28px;
+    /* 表示するx軸方向設定 */
+    top: 21%;
+    /* 表示するy軸方向設定 */
+    margin-top: -15px;
+    /* 作成した▲を中央寄せ */
+    /* ▲の向き設定 */
+    border-top: 15px solid transparent;
+    border-right: 15px solid #CCA43B;
+    /* ← */
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+}
+.balloonL_text{
+    display: block;
+    padding-left: 15px;
+    color: #FFF;
+}
+.balloonL_text p{
+    font-size: 11px;
+}
+.balloonR_text{
+    display: block;
+    padding-left: 15px;
+    color: #FFF;
+}
+.balloonR_text p{
+    font-size: 11px;
+}
+/* →吹き出し */
+.balloonR {
+    position: relative;
+    /* 絶対配置の基準宣言 */
+    display: inline-flex;
+    /* コンテンツのサイズによってバルーンサイズ変更 */
+    padding: 20px;
+    /* パディング領域 */
+    border-radius: 10px;
+    /* 吹き出しの角を丸く */
+    color: #010101;
+    /* コンテンツの色 */
+    background-color: #CCA43B;
+    /* バルーンの背景の色 */
+    margin-right: 110px;
+    /* 右に空けるスペース */
+    margin-bottom: 35px;
+    /* 下に空けるスペース */
+    margin-left: 20%;
+    /* 下に空けるスペース */
+    float: right;
+    /* 右寄せ表示 */
+}
+
+.balloonR .iconR {
+    position: absolute;
+    /* 絶対配置宣言 */
+    right: -110px;
+    /* 右に空けたスペースににアイコンを表示 */
+    top: 0;
+    /* 頂点を合わせる */
+    width: 86px;
+    /* アイコンの幅 */
+    height: 86px;
+    /* アイコンの高さ */
+    border-radius: 50%;
+    /* 画像を丸くくり抜く */
+}
+.nameR{
+    position: absolute;
+    /* 絶対配置宣言 */
+    right: -110px;
+    /* 左に空けたスペースににアイコンを表示 */
+    top: 86px;
+    width: 86px;
+    font-size: 14px;
+    text-align: center;
+}
+.balloonR::before {
+    /* 吹き出しの三角形作成 */
+    content: '';
+    /* 文字は空欄 */
+    position: absolute;
+    /* 絶対配置宣言 */
+    display: block;
+    width: 0;
+    height: 0;
+    right: -28px;
+    /* 表示するx軸方向設定 */
+    top: 21%;
+    /* 表示するy軸方向設定 */
+    margin-top: -15px;
+    /* 作成した▲を中央寄せ */
+    /* ▲の向き設定 */
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #CCA43B;
+    /* → */
+}
+#Qimg{
+    width: 50px;
+    height: 60px;
+}
+#Aimg{
+    width: 50px;
+    height: 60px;
+}
+/*-------------------------------*/

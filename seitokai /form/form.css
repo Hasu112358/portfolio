@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+.form {
+    background-color: #FFF;
+    outline: 10px solid #508CA4;
+    outline-offset: -1px;
+}
+.form-wrap{
+    width: 80%;
+    position: relative;
+    margin: 50px 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.form_title {
+    background-color: #508CA4;
+    width: 100%;
+    background-color: #508CA4;
+}
+
+.form_title ul {
+    padding: 10px;
+    list-style: inside;
+    margin: 0px;
+}
+
+.form_title li {
+    color: #FFF;
+    font-size: 16px;
+    text-align: left;
+}
+
+.form_boxes {
+    display: flex;
+    border-bottom: #508CA4 10px solid;
+}
+
+.form_box_1 {
+    display: flex;
+    width: 290px;
+    border-right: 10px solid #508CA4;
+    height: 125px;
+}
+
+.form_box_1 div p {
+    color: #508CA4;
+    font-size: 20px;
+}
+
+.form_box_1_width {
+    padding-top: 20px;
+    padding-left: 50px;
+    display: flex;
+}
+
+.form_box_1_inputs {
+    color: #508CA4;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/*-----------------------------*/
+label {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+label::before,
+label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+label::before {
+    background-color: #fff;
+    border: 1px solid #508CA4;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+}
+
+label::after {
+    background-color: #508CA4;
+    opacity: 0;
+    height: 14px;
+    width: 14px;
+    left: 9px;
+}
+
+input:checked+label::after {
+    opacity: 1;
+}
+
+.visually-hidden {
+    /* コンテンツの流れから切り離す */
+    position: absolute;
+    /* 誤ったコードに対処するための回避策 */
+    white-space: nowrap;
+    /* 可能な限り文字サイズを小さくするための処理
+     * (スクリーンリーダー中には height と width が 0 のものを無視するため)
+     */
+    width: 1px;
+    height: 1px;
+    /* オーバーフローしているコンテンツを隠す */
+    overflow: hidden;
+    /* 要素サイズを変更しうるプロパティのリセット */
+    border: 0;
+    padding: 0;
+    /* 要素のどの部分が表示されるかを定義するもの */
+    /* 古いブラウザでは使用できない */
+    clip: rect(0 0 0 0);
+    /* 最近のブラウザ用
+     * コンテンツを非表示にする設定  */
+    clip-path: inset(50%);
+    /* 今現在なぜ-1pxがここで設定されるかは分かっていないそうです。
+     * それに加えていくつか問題もあるそうです 
+     * (参考: https://github.com/h5bp/html5-boilerplate/issues/1985)
+     */
+    margin: -1px;
+}
+
+/*-----------------------------*/
+.form_box_1_input {
+    display: block;
+}
+
+.form_box_1_input input {
+    color: #508CA4;
+}
+
+.form_box_2 {
+    display: block;
+    height: 125px;
+    font-size: 20px;
+    width: 70%;
+}
+
+.form_box_2 p {
+    color: #508CA4;
+}
+
+.form_box_2 input {
+    color: #508CA4;
+}
+
+.form_box_2_width {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.form_box_3 {
+    display: block;
+    height: 220px;
+}
+
+.form_box_3 p {
+    color: #508CA4;
+    font-size: 20px;
+}
+
+.form_box_3_width {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.form_deci {
+    position: relative;
+    background-color: #508CA4;
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+
+    background-color: #FFF;
+    outline: 10px solid #508CA4;
+    outline-offset: -1px;
+}
+
+.form_deci_box {
+    color: #FFF;
+    background-color: #508CA4;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    transition: all 0.2s;
+    outline-offset: -5px;
+}
+
+.form_deci_box:hover {
+    color: #508CA4;
+    background-color: #FFF;
+    transition: all 0.2s;
+}
+
+#form_text_1 {
+    width: 85%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 5px solid #508CA4;
+    /*枠線*/
+    margin: 5px;
+    margin-left: 0px;
+}
+
+#form_text_2 {
+    width: 90%;
+    height: 110px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 5px solid #508CA4;
+    /*枠線*/
+    margin: 5px;
+    margin-left: 0px;
+    resize: none;
+}
+
+.thanks_width {
+    position: relative;
+    width: 70%;
+    margin: 50px 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.thanks_title {
+    border: 10px solid #508CA4;
+    background-color: #FFF;
+    height: 80px;
+}
+
+.thanks_title p {
+    color: #508CA4;
+    font-size: 30px;
+    text-align: center;
+    padding: 19px;
+}
+
+.thanks_text {
+    padding: 30px 100px 60px;
+}
+
+.thanks_text p {
+    font-size: 16px;
+}
+
+.thanks_text p a {
+    color: #508CA4;
+    border-bottom: #508CA4 2px solid;
+}
+
+.thanks_back {
+    width: 500px;
+    background-color: #508CA4;
+    outline: #508CA4 10px solid;
+    outline-offset: -10px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    cursor: pointer;
+}
+
+.thanks_back p {
+    color: #FFF;
+    font-size: 30px;
+    padding: 19px 50px;
+}
+
+.thanks_back svg {
+    padding: 17px;
+}
+
+.thanks_back a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}

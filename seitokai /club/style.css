@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+p,
+h1 {
+    margin: 0px;
+}
+body{
+    font-family: Noto Sans JP, Hiragino Kaku Gothic ProN,-apple-system,Segoe UI,Helvetica Neue,"メイリオ",meiryo,sans-serif;
+}
+.openbtn{
+    top: 10px;
+}
+/*------------------------------------*/
+.club-sections a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.club-sections{
+    margin: 10vh 135px;
+}
+.switch-btns{
+    display: flex;
+    padding-bottom: 20px;
+}
+.switch-btn{
+    background-color: #FFF;
+    height: 70px;
+    width: 43%;
+    padding-left: 5%;
+}
+.switch-btn p{
+    font-size: 30px;
+}
+.switch-btns :first-child{
+    margin-right: 4%;
+}
+.section-clubs{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-clubs .item{
+    background-color: #FFF;
+    height: 70px;
+    width: 43%;
+    padding-left: 5%;
+    margin-top: 15px;
+    font-size: 30px;
+    position: relative;
+
+    white-space: nowrap; /* テキストを折り返さないようにする */
+    overflow: hidden; /* はみ出た部分を非表示にする */
+    text-overflow: ellipsis;
+}
+
+.section-clubs :nth-child(odd){
+    margin-right: 4%;
+}
+.section-clubs p,.section-clubs a{
+    margin-right: 0px!important;
+}
+.switch-to-sports{
+    outline: 3px dashed #508CA4;
+    outline-offset: -3px;
+    color: #508CA4;
+}
+.switch-to-culture{
+    outline: 3px dashed #CCA43B;
+    outline-offset: -3px;
+    color: #CCA43B;
+}
+.club-active-sports{
+    background-color: #508CA4;
+    color: #FFF;
+}
+.club-active-culture{
+    background-color: #CCA43B;
+    color: #FFF;
+}
+.item::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 10px;
+    height: 100%;
+    display: block;
+}
+.section-sports .item::after{
+    background-color: #508CA4;
+}
+.section-culture .item::after{
+    background-color: #CCA43B;
+}
+.openbtn{
+    top: 10px;
+}
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    position: relative;
+    z-index: 1;
+    /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+}
+.slider-img {
+    width: 100%;
+    /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+    color: #FFF;
+}
+.slider-img img{
+    width: 100%;
+}
+
+.slider-item {
+    width: 100%;
+    /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    background-repeat: no-repeat;
+    /*背景画像をリピートしない*/
+    background-position: center;
+    /*背景画像の位置を中央に*/
+    background-size: cover;
+    /*背景画像が.slider-item全体を覆い表示*/
+    background-color: #F4F4F4;
+    color: #000;
+}
+.for_scrolling{
+    height: 50vh;
+    overflow: scroll;
+}
+.for_scrolling::-webkit-scrollbar{
+    display:none;
+}
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    z-index: 3;
+    top: 44vh;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    height: 25px;
+    width: 25px;
+}
+#fixed_club_sports .slick-prev, #fixed_club_sports .slick-next{
+    border-top: 3px solid #508CA4;
+    /*矢印の色*/
+    border-right: 3px solid #508CA4;
+    /*矢印の色*/
+}
+#fixed_club_culture .slick-prev, #fixed_club_culture .slick-next{
+    border-top: 3px solid #CCA43B;
+    /*矢印の色*/
+    border-right: 3px solid #CCA43B;
+    /*矢印の色*/
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 4%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 4%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -27px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    /*ドットボタンのサイズ*/
+    height: 8px;
+    /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #FFF;
+    /*ドットボタンの色*/
+}
+
+#club_sports .wrapper .slider .slick-dots .slick-active button {
+    background: #508CA4;
+    outline: #FFF solid 4px;
+}
+#club_culture .wrapper .slider .slick-dots .slick-active button {
+    background: #CCA43B;
+    outline: #FFF solid 4px;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.container {
+    background: #555;
+}
+
+.container p {
+    padding: 300px 0;
+    text-align: center;
+    color: #fff;
+}
+.cont-box-sports{
+    padding: 50px 100px;
+}
+.cont-box-culture{
+    padding: 50px 100px;
+}
+.cont-details{
+    padding-bottom: 40px;
+}
+.cont-details h3{
+    font-size: 22px;
+}
+.without-details{
+    display: flex;
+}
+.cont-box-sports h2{
+    font-size: 40px;
+    border-bottom: 3px #508CA4 solid;
+    margin-bottom: 40px;
+}
+.cont-box-culture h2{
+    font-size: 40px;
+    border-bottom: 3px #CCA43B solid;
+    margin-bottom: 40px;
+}
+.details-box h3{
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+.details-box p{
+    font-size: 16px;
+    padding: 0px 20px;
+}
+.member ,.do-kono-location{
+    padding-bottom: 40px;
+}
+.location-and-time-and-member{
+    width: 50%;
+}
+.under_info{
+    position: relative;
+    background-color: #FFF;
+}
+.fixed_clubs{
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000000;
+}
+.bg-close{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0 ,0.5);
+    z-index: 9999999;
+}
+
+/*--------------------------------------------------*/
+.open-club-btn{
+    height: 100px;
+    width: 100px;
+    background: #508CA4;
+}

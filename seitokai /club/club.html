@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+    </style>
+</head>
+<body>
+    <div class="openbtn"><span></span><span></span><span></span></div>
+    <nav id="g-nav">
+        <div id="g-nav-list">
+            <div class="box-menu">
+                <div class="color_bar"><a href="/article/article.html"><img src="/img/menu/Frame 1.svg"></a></div>
+                <div class="color_bar"><a href="/committee/committee.html"><img src="/img/menu/Frame 2.svg"></a></div>
+                <div class="color_bar"><a href="/schedule/schedule.html"><img src="/img/menu/Frame 3.svg"></a></div>
+                <div class="color_bar"><a href="/club/club.html"><img src="/img/menu/Frame 4.svg"></a></div>
+                <div class="color_bar"><a href="/form/form.html"><img src="/img/menu/Frame 5.svg"></a></div>
+                <div class="color_bar"><a href="https://www.instagram.com/sakuchoseihighschool/"><img src="/img/menu/Frame 6.svg"></a></div>
+            </div>
+            <a href="../index.html" class="gohome"><img src="/img/menu/home.svg" height="40px" width="40px"></a>
+            <a href="https://www.instagram.com/sakuchoseihighschool/" class="goinsta"><img src="/img/menu/instagram.svg" height="35px" width="35px"></a>
+            <div class="closebg"></div>
+        </div>
+    </nav>
+    <a href="../index.html"><img src="/img/big-logo.png" class="logo"></a>
+    <header id="header">
+        <div class="title">部活動紹介</div>
+    </header>
+    <div class="club-sections">
+        <div class="switch-btns">
+            <div class="switch-to-sports switch-btn club-active-sports" id="elementA"><a href="#" id="button_sports"><p>運動部 (19)</p></a></div>
+            <div class="switch-to-culture switch-btn" id="elementB"><a href="#" id="button_culture"><p>文化部 (16)</p></a></div>
+        </div>
+        <div class="section-sports section-clubs">
+            <div class="item"><a href="#" id="openModal_club_sports1" onclick="return false;"><p>駅伝部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports2" onclick="return false;"><p>陸上部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports3" onclick="return false;"><p>野球部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports4" onclick="return false;"><p>男子バスケットボール部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports5" onclick="return false;"><p>女子バスケットボール部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports6" onclick="return false;"><p>柔道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports7" onclick="return false;"><p>剣道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports8" onclick="return false;"><p>スケート部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports9" onclick="return false;"><p>ゴルフ部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports10" onclick="return false;"><p>女子サッカー部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports11" onclick="return false;"><p>女子野球部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports12" onclick="return false;"><p>弓道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports13" onclick="return false;"><p>女子バレーボール部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports14" onclick="return false;"><p>硬式テニス部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports15" onclick="return false;"><p>卓球部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports16" onclick="return false;"><p>男子サッカー部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports17" onclick="return false;"><p>水泳部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports18" onclick="return false;"><p>硬式野球同好会</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_sports19" onclick="return false;"><p>スポーツ同好会</p></a></div>
+        </div>
+        <div class="section-culture section-clubs" style="display: none;">
+            <div class="item"><a href="#" id="openModal_club_culture1" onclick="return false;"><p>吹奏楽部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture2" onclick="return false;"><p>書道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture3" onclick="return false;"><p>華道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture4" onclick="return false;"><p>茶道部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture5" onclick="return false;"><p>写真部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture6" onclick="return false;"><p>科学部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture7" onclick="return false;"><p>囲碁将棋部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture8" onclick="return false;"><p>アートクリエーション部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture9" onclick="return false;"><p>英会話部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture10" onclick="return false;"><p>インターアクト部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture11" onclick="return false;"><p>クイズ研究会部</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture12" onclick="return false;"><p>管弦楽部（中高合同）</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture13" onclick="return false;"><p>ダンス部（中高合同）</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture14" onclick="return false;"><p>チアリーダー同好会</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture15" onclick="return false;"><p>合唱同好会</p></a></div>
+            <div class="item"><a href="#" id="openModal_club_culture16" onclick="return false;"><p>ギター同好会</p></a></div>
+        </div>
+    </div>
+    <!--基本display:none;-->
+        <div id="fixed_club_sports" style="display: none;">
+            <section id="club_sports" class="fixed_clubs">
+                <div class="wrapper">
+                    <ul class="slider">
+                        <li class="slider-img slider-item01"><img src="img/sports/Frame 1.png"></li>
+                        <li class="slider-img slider-item02"><img src="img/sports/Frame 2.png"></li>
+                        <li class="slider-img slider-item03"><img src="img/sports/Frame 3.png"></li>
+                        <li class="slider-img slider-item04"><img src="img/sports/Frame 4.png"></li>
+                        <li class="slider-img slider-item05"><img src="img/sports/Frame 5.png"></li>
+                        <li class="slider-img slider-item06"><img src="img/sports/Frame 6.png"></li>
+                        <li class="slider-img slider-item07"><img src="img/sports/Frame 7.png"></li>
+                        <li class="slider-img slider-item08"><img src="img/sports/Frame 8.png"></li>
+                        <li class="slider-img slider-item09"><img src="img/sports/Frame 9.png"></li>
+                        <li class="slider-img slider-item10"><img src="img/sports/Frame 10.png"></li>
+                        <li class="slider-img slider-item11"><img src="img/sports/Frame 11.png"></li>
+                        <li class="slider-img slider-item12"><img src="img/sports/Frame 12.png"></li>
+                        <li class="slider-img slider-item13"><img src="img/sports/Frame 13.png"></li>
+                        <li class="slider-img slider-item14"><img src="img/sports/Frame 14.png"></li>
+                        <li class="slider-img slider-item15"><img src="img/sports/Frame 15.png"></li>
+                        <li class="slider-img slider-item16"><img src="img/sports/Frame 16.png"></li>
+                        <li class="slider-img slider-item17"><img src="img/sports/Frame 17.png"></li>
+                        <li class="slider-img slider-item18"><img src="img/sports/Frame 18.png"></li>
+                        <li class="slider-img slider-item19"><img src="img/sports/Frame 19.png"></li>
+                    </ul>
+                </div>
+                <div class="under_info">
+                    <div class="wrapper_info">
+                        <ul class="slider_other">
+                            <li class="slider-item slider-item01" style="width: 100%;">
+                                <div class="for_scrolling">
+                                    <div class="cont-box-sports">
+                                        <h2>駅伝部</h2>
+                                        <div class="details-box">
+                                            <div class="cont-details">
+                                                <p>僕達は、先生の指導のもと、県大会出場を目標に日々活動しています。 やる気があってサッカーを頑張りたい、という人は、未経験の方でも大歓迎です！
+                                                    練習では、基礎を固めたり、色々なシチュエーションを想定してメニューに入れています。あとは試合を多めにやります。これは試合の緊張感を忘れないためでもあります。
+                                                    皆で楽しく真剣にサッカーをしましょう！</p>
+                                            </div>
+                                            <div class="without-details">
+                                                <div class="location-and-time-and-member">
+                                                    <div class="member">
+                                                        <h3>部員数</h3>
+                                                        <p>1年 15人<br>2年 6人</p>
+                                                    </div>
+                                                    <div class="do-kono-location?">
+                                                        <h3>場所、時間</h3>
+                                                        <p>平日 16:15~18:30<br>休日 09:00~12:00/13:00~16:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="achievements">
+                                                    <h3>実績</h3>
+                                                    <p>2020年xxx大会準優勝<br>2021年xxx大会準優勝<br>2022年xxx大会優勝</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item slider-item02">
+                                <div class="for_scrolling">
+                                    <div class="cont-box-sports">
+                                        <h2>陸上部</h2>
+                                        <div class="details-box">
+                                            <div class="cont-details">
+                                                <p>僕達は、先生の指導のもと、県大会出場を目標に日々活動しています。 やる気があってサッカーを頑張りたい、という人は、未経験の方でも大歓迎です！
+                                                    練習では、基礎を固めたり、色々なシチュエーションを想定してメニューに入れています。あとは試合を多めにやります。これは試合の緊張感を忘れないためでもあります。
+                                                    皆で楽しく真剣にサッカーをしましょう！</p>
+                                            </div>
+                                            <div class="without-details">
+                                                <div class="location-and-time-and-member">
+                                                    <div class="member">
+                                                        <h3>部員数</h3>
+                                                        <p>1年 15人<br>2年 6人</p>
+                                                    </div>
+                                                    <div class="do-kono-location?">
+                                                        <h3>場所、時間</h3>
+                                                        <p>平日 16:15~18:30<br>休日 09:00~12:00/13:00~16:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="achievements">
+                                                    <h3>実績</h3>
+                                                    <p>2020年xxx大会準優勝<br>2021年xxx大会準優勝<br>2022年xxx大会優勝</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item slider-item03"><div class="cont-box-sports">03</div></li>
+                            <li class="slider-item slider-item04"><div class="cont-box-sports">04</div></li>
+                            <li class="slider-item slider-item05"><div class="cont-box-sports">05</div></li>
+                            <li class="slider-item slider-item06"><div class="cont-box-sports">06</div></li>
+                            <li class="slider-item slider-item07"><div class="cont-box-sports">07</div></li>
+                            <li class="slider-item slider-item08"><div class="cont-box-sports">08</div></li>
+                            <li class="slider-item slider-item09"><div class="cont-box-sports">09</div></li>
+                            <li class="slider-item slider-item10"><div class="cont-box-sports">10</div></li>
+                            <li class="slider-item slider-item11"><div class="cont-box-sports">11</div></li>
+                            <li class="slider-item slider-item12"><div class="cont-box-sports">12</div></li>
+                            <li class="slider-item slider-item13"><div class="cont-box-sports">13</div></li>
+                            <li class="slider-item slider-item14"><div class="cont-box-sports">14</div></li>
+                            <li class="slider-item slider-item15"><div class="cont-box-sports">15</div></li>
+                            <li class="slider-item slider-item16"><div class="cont-box-sports">16</div></li>
+                            <li class="slider-item slider-item17"><div class="cont-box-sports">17</div></li>
+                            <li class="slider-item slider-item18"><div class="cont-box-sports">18</div></li>
+                            <li class="slider-item slider-item19"><div class="cont-box-sports">19</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="bg-close"></div>
+        </div>
+        <div id="fixed_club_culture" style="display: none;">
+            <section id="club_culture" class="fixed_clubs">
+                <div class="wrapper">
+                    <ul class="slider">
+                        <li class="slider-img slider-item01"><img src="img/culture/Frame 1.png"></li>
+                        <li class="slider-img slider-item02"><img src="img/culture/Frame 2.png"></li>
+                        <li class="slider-img slider-item03"><img src="img/culture/Frame 3.png"></li>
+                        <li class="slider-img slider-item04"><img src="img/culture/Frame 4.png"></li>
+                        <li class="slider-img slider-item05"><img src="img/culture/Frame 5.png"></li>
+                        <li class="slider-img slider-item06"><img src="img/culture/Frame 6.png"></li>
+                        <li class="slider-img slider-item07"><img src="img/culture/Frame 7.png"></li>
+                        <li class="slider-img slider-item08"><img src="img/culture/Frame 8.png"></li>
+                        <li class="slider-img slider-item09"><img src="img/culture/Frame 9.png"></li>
+                        <li class="slider-img slider-item10"><img src="img/culture/Frame 10.png"></li>
+                        <li class="slider-img slider-item11"><img src="img/culture/Frame 11.png"></li>
+                        <li class="slider-img slider-item12"><img src="img/culture/Frame 12.png"></li>
+                        <li class="slider-img slider-item13"><img src="img/culture/Frame 13.png"></li>
+                        <li class="slider-img slider-item14"><img src="img/culture/Frame 14.png"></li>
+                        <li class="slider-img slider-item15"><img src="img/culture/Frame 15.png"></li>
+                        <li class="slider-img slider-item16"><img src="img/culture/Frame 16.png"></li>
+                        <li class="slider-img slider-item17"><img src="img/culture/Frame 17.png"></li>
+                        <li class="slider-img slider-item18"><img src="img/culture/Frame 18.png"></li>
+                        <li class="slider-img slider-item19"><img src="img/culture/Frame 19.png"></li>
+                    </ul>
+                </div>
+                <div class="under_info">
+                    <div class="wrapper_info">
+                        <ul class="slider_other">
+                            <li class="slider-item slider-item01">
+                                <div class="for_scrolling">
+                                    <div class="cont-box-culture">
+                                        <h2>吹奏楽部</h2>
+                                        <div class="details-box">
+                                            <div class="cont-details">
+                                                <p>僕達は、先生の指導のもと、県大会出場を目標に日々活動しています。 やる気があってサッカーを頑張りたい、という人は、未経験の方でも大歓迎です！
+                                                    練習では、基礎を固めたり、色々なシチュエーションを想定してメニューに入れています。あとは試合を多めにやります。これは試合の緊張感を忘れないためでもあります。
+                                                    皆で楽しく真剣にサッカーをしましょう！</p>
+                                            </div>
+                                            <div class="without-details">
+                                                <div class="location-and-time-and-member">
+                                                    <div class="member">
+                                                        <h3>部員数</h3>
+                                                        <p>1年 15人<br>2年 6人</p>
+                                                    </div>
+                                                    <div class="do-kono-location?">
+                                                        <h3>場所、時間</h3>
+                                                        <p>平日 16:15~18:30<br>休日 09:00~12:00/13:00~16:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="achievements">
+                                                    <h3>実績</h3>
+                                                    <p>2020年xxx大会準優勝<br>2021年xxx大会準優勝<br>2022年xxx大会優勝</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item slider-item02">
+                                <div class="for_scrolling">
+                                    <div class="cont-box-culture">
+                                        <h2>書道部</h2>
+                                        <div class="details-box">
+                                            <div class="cont-details">
+                                                <p>僕達は、先生の指導のもと、県大会出場を目標に日々活動しています。 やる気があってサッカーを頑張りたい、という人は、未経験の方でも大歓迎です！
+                                                    練習では、基礎を固めたり、色々なシチュエーションを想定してメニューに入れています。あとは試合を多めにやります。これは試合の緊張感を忘れないためでもあります。
+                                                    皆で楽しく真剣にサッカーをしましょう！</p>
+                                            </div>
+                                            <div class="without-details">
+                                                <div class="location-and-time-and-member">
+                                                    <div class="member">
+                                                        <h3>部員数</h3>
+                                                        <p>1年 15人<br>2年 6人</p>
+                                                    </div>
+                                                    <div class="do-kono-location?">
+                                                        <h3>場所、時間</h3>
+                                                        <p>平日 16:15~18:30<br>休日 09:00~12:00/13:00~16:00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="achievements">
+                                                    <h3>実績</h3>
+                                                    <p>2020年xxx大会準優勝<br>2021年xxx大会準優勝<br>2022年xxx大会優勝</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item slider-item03"><div class="cont-box-sports">03</div></li>
+                            <li class="slider-item slider-item04"><div class="cont-box-sports">04</div></li>
+                            <li class="slider-item slider-item05"><div class="cont-box-sports">05</div></li>
+                            <li class="slider-item slider-item06"><div class="cont-box-sports">06</div></li>
+                            <li class="slider-item slider-item07"><div class="cont-box-sports">07</div></li>
+                            <li class="slider-item slider-item08"><div class="cont-box-sports">08</div></li>
+                            <li class="slider-item slider-item09"><div class="cont-box-sports">09</div></li>
+                            <li class="slider-item slider-item10"><div class="cont-box-sports">10</div></li>
+                            <li class="slider-item slider-item11"><div class="cont-box-sports">11</div></li>
+                            <li class="slider-item slider-item12"><div class="cont-box-sports">12</div></li>
+                            <li class="slider-item slider-item13"><div class="cont-box-sports">13</div></li>
+                            <li class="slider-item slider-item14"><div class="cont-box-sports">14</div></li>
+                            <li class="slider-item slider-item15"><div class="cont-box-sports">15</div></li>
+                            <li class="slider-item slider-item16"><div class="cont-box-sports">16</div></li>
+                            <li class="slider-item slider-item17"><div class="cont-box-sports">17</div></li>
+                            <li class="slider-item slider-item18"><div class="cont-box-sports">18</div></li>
+                            <li class="slider-item slider-item19"><div class="cont-box-sports">19</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="bg-close"></div>
+        </div>
+    <!--/基本display:none;-->
+    <script src="/js/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <title>Form</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="form.css">
+        <script src="/js/jquery-3.6.1.min.js"></script>
+    </head>
+    <body>
+        <div class="openbtn"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+            <div id="g-nav-list">
+                <div class="box-menu">
+                    <div class="color_bar"><a href="/article/article.html"><img src="/img/menu/Frame 1.svg"></a></div>
+                    <div class="color_bar"><a href="/committee/committee.html"><img src="/img/menu/Frame 2.svg"></a></div>
+                    <div class="color_bar"><a href="/schedule/schedule.html"><img src="/img/menu/Frame 3.svg"></a></div>
+                    <div class="color_bar"><a href="/club/club.html"><img src="/img/menu/Frame 4.svg"></a></div>
+                    <div class="color_bar"><a href="/form/form.html"><img src="/img/menu/Frame 5.svg"></a></div>
+                    <div class="color_bar"><a href="https://www.instagram.com/sakuchoseihighschool/"><img src="/img/menu/Frame 6.svg"></a></div>
+                </div>
+                <a href="../index.html" class="gohome"><img src="/img/menu/home.svg" height="40px" width="40px"></a>
+                <a href="https://www.instagram.com/sakuchoseihighschool/" class="goinsta"><img src="/img/menu/instagram.svg" height="35px" width="35px"></a>
+                <div class="closebg"></div>
+            </div>
+        </nav>
+        <a href="../index.html"><img src="/img/big-logo.png" class="logo"></a>
+        <header id="header">
+            <div class="title">問い合わせフォーム</div>
+        </header>
+        <main>
+            <section class="form-wrap">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6zX4q_RJWXVs57wknYTLoCnna1g5GGvJdZy9Vhba-mx4IFQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <section class="form">
+                        <div class="form_title">
+                            <ul>
+                                <li>問い合わせフォームは、お問い合わせ内容を入力するフォームです。</li>
+                                <li>お問い合わせには、お名前やメールアドレス、お問い合わせの内容を入力してください。</li>
+                                <li>問い合わせ内容を入力したら、送信ボタンをクリックすることで、お問い合わせを送信することができます。</li>
+                            </ul>
+                        </div>
+                        <div class="form_boxes">
+                            <div class="form_box_1">
+                                <div class="form_box_1_width">
+                                    <div>
+                                        <p>学年：</p>
+                                    </div>
+                                    <div class="form_box_1_inputs">
+                                        <input type="radio" name="entry.1709551916" value="１年" id="f_grade" class="visually-hidden"><label for="f_grade">１年</label><br>
+                                        <input type="radio" name="entry.1709551916" value="２年" id="s_grade" class="visually-hidden"><label for="s_grade">２年</label><br>
+                                        <input type="radio" name="entry.1709551916" value="３年" id="t_grade" class="visually-hidden"><label for="t_grade">３年</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_box_2">
+                                <div class="form_box_2_width">
+                                    <p>名前（ニックネーム）：</p>
+                                    <input type="text" name="entry.1671624616" id="form_text_1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_box_3">
+                            <div class="form_box_3_width">
+                                <p>お問い合わせ内容：</p>
+                                <textarea name="entry.381221041" rows="3" cols="50" id="form_text_2"></textarea>
+                            </div>
+                        </div>
+                    </section>
+                    <!--この見にくい送信ボタンを誰かどうにかしてくれ-->
+                    <div class="form_deci">
+                        <button type="submit" class="form_deci_box">送信</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer_1">
+                <ul>
+                    <li><a href="/article/article.html">記事一覧</a></li>
+                    <li><a href="/committee/committee.html">委員会</a></li>
+                    <li><a href="/schedule/schedule.html">年間行事</a></li>
+                    <li><a href="/club/club.html">部活動</a></li>
+                    <li><a href="/form/form.html">投書箱</a></li>
+                    <li><a href="https://www.instagram.com/sakuchoseihighschool/">生徒会運営Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer_2">
+                <ul>
+                    <li>お問い合わせ <a href="#">執行部</a></li>
+                    <li>制作-佐久長聖生徒会</li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            let submitted = false;
+            const page_transition = function () {
+                if(submitted){
+                    window.location = 'thanks.html';
+                }
+            }
+        </script>
+        <script src="/js/main.js"></script>
+        <script src="/js/particles.min.js"></script>
+        <script src="/js/particle.js"></script>
+        <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
+    </body>
+</html>

@@ -1,0 +1,451 @@
+@charset "UTF-8";
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.bar_box {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+}
+
+.bar_unit {
+    transform: translateY(-28px);
+    position: absolute;
+}
+
+.bar_unit div {
+    height: 6px;
+    width: 11vw;
+    transform: translate(35%, -35%);
+    background-color: #333;
+}
+.bar_unit div ::after{
+    height: 6px;
+    width: 20px;
+    background-color: #333;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.bar_unit p {
+    padding-left: 55px;
+    color: #333;
+    margin: 2px;
+    font-size: 20px;
+}
+
+main {
+    position: relative;
+}
+
+.without_bar {
+    display: flex;
+    margin: 50px 0px;
+}
+
+.meter_l {
+    width: 15vw;
+}
+
+.meter_r {
+    width: 15vw;
+}
+
+.eventboxes {
+    width: 70vw;
+}
+
+.eventbox {
+    height: 130px;
+    background-color: #FFF;
+    margin-bottom: 5px;
+    display: flex;
+}
+/*-------------------------------*/
+.box_width {
+    padding: 10px 10px;
+    min-width: 0;
+}
+
+.box_front {
+    display: flex;
+}
+.box_front img{
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+.box_title {
+    font-size: 27px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 10px;
+    height: 40px;
+    border-bottom: #CCA43B solid 3px;
+    color: #333;
+}
+.box_text {
+    padding: 0px 12px;
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding-top: 10px;
+    color: #a4a4a4;
+}
+
+
+
+/*-------------------------------*/
+.month {
+    display: block;
+    background-color: #CCA43B;
+    text-align: center;
+    width: 70px;
+}
+
+.month p:first-child {
+    font-size: 50px;
+    color: #FFF;
+}
+
+.month p:last-child {
+    font-size: 30px;
+    margin: 10px 0px;
+    color: #FFF;
+}
+
+.event {
+    height: 120px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 32.5%;
+    transition-duration: 0.1s;
+    flex-shrink: 1;
+    min-width: 0;
+    background-color: #FFF;
+}
+
+.event:hover {
+    z-index: 100;
+    transform: scale(1.02);
+
+}
+
+.event:last-child {
+    margin-right: 5px;
+}
+
+.events {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 85%;
+}
+.events a{
+    display: block;
+}
+
+.events ul {
+    display: flex;
+}
+
+.meter_l {
+    padding-right: 15px;
+}
+
+.meter_r {
+    padding-left: 15px;
+}
+
+.meter_box {
+    height: 130px;
+    margin-bottom: 5px;
+    width: 55px;
+}
+
+.meter_l .meter_box {
+    margin-left: auto;
+}
+
+.meter_r .meter_box {
+    margin-right: auto;
+}
+
+.meter_box div {
+    height: 3px;
+    width: 35px;
+    background-color: #FFF;
+    margin-left: auto;
+}
+
+.meter_l .meter_box div {
+    margin-bottom: 50px;
+    margin-right: 0;
+}
+
+.meter_r .meter_box div {
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+
+.meter_l .meter_box div:nth-of-type(1) {
+    transform: translateY(-5px);
+    margin-bottom: 35px;
+    width: 55px;
+}
+
+.meter_r .meter_box div:nth-of-type(1) {
+    transform: translateY(-5px);
+    margin-bottom: 35px;
+    width: 55px;
+}
+
+#bar_js {
+    position: absolute;
+    white-space: nowrap;
+}
+
+/*------------------------------------*/
+
+.modaal_frame {
+    height: 530px;
+    width: 930px;
+    border: #CCA43B solid 10px;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modaal_frame .closeModal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.modaal_frame .closeModal::before,
+.modaal_frame .closeModal::after {
+    background: #CCA43B;
+    height: 40px;
+    width: 6px;
+}
+.modaal_width {
+    width: 720px;
+    height: 445px;
+    margin: 30px 105px 20px;
+}
+
+.modaal_title {
+    font-size: 50px;
+    border-bottom: #CCA43B solid 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modaal_h {
+    margin-bottom: 10px;
+    list-style: inside;
+}
+
+.modaal_h p {
+    font-size: 22px;
+}
+
+.modaal_h ul {
+    font-size: 18px;
+    list-style: inside;
+    margin-left: 10px;
+}
+
+.modaal_color {
+    margin-bottom: 10px;
+}
+
+.modaal_color p {
+    font-size: 22px;
+}
+
+.modaal_color_box {
+    outline-offset: -5px;
+    outline: #CCA43B 5px solid;
+}
+
+.modaal_color_flex {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modaal_color_texts {
+    display: block;
+    margin: 0px 75px;
+    text-align: center;
+}
+
+.modaal_color_texts p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+.modaal_color_texts p:last-child {
+    margin-bottom: 10px;
+}
+
+.modaal_minititle {
+    margin-bottom: 10px;
+}
+.modaal_jump{
+    text-align: center;
+    background-color: #CCA43B;
+    width: 100%;
+    font-size: 30px;
+    color: #FFF;
+    height: 57px;
+    outline: #CCA43B 5px solid;
+    outline-offset: -5px;
+}
+.modaal_jump p{
+    padding: 6px;
+}
+
+.modaal_width a {
+    transition: 0.5s;
+}
+
+.modaal_width a:hover .modaal_jump {
+    background-color: #FFF;
+    color: #CCA43B;
+    transition: 0.5s;
+}
+
+.modaal_attention {
+    text-align: right;
+    padding: 3px;
+}
+
+.modaal_color_text {
+    color: #FFF;
+}
+
+#info {
+    display: none;
+}
+
+.modaal-content-container {
+    padding: 0px;
+}
+
+.modaal-container {
+    width: 75%;
+}
+
+.modaal-wrapper * {
+    box-sizing: content-box;
+}
+
+.open_btn {
+    height: 50px;
+    width: 50px;
+    background-color: #CCA43B;
+    border-radius: 50%;
+    color: #FFF;
+    text-align: center;
+    font-size: 35px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.modal-open {
+    color: #FFF;
+}
+
+/*----------------------------*/
+/* モーダルCSS */
+.modalArea {
+    display: none;
+    position: fixed;
+    z-index: 110;/*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modalArea_top{
+    display: none;
+}
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    max-height: 500px;
+    background-color: #FFF;
+}
+
+.modalContents {
+    padding: 30px;
+}
+
+.modalTitle {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/* 以下ボタンスタイル */
+.openModal{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.closeModal {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.closeModal::before,
+.closeModal::after {/* 共通設定 */
+    content: "";
+    width: 5px;/* 棒の幅（太さ） */
+    height: 30px;/* 棒の高さ */
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.closeModal::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.closeModal::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

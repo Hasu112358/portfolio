@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/************/
+/* リセットcss */
+/************/
+html, body, div, h1, h2, h3, h4, h5, h6, p, li, dl, dt, dd, table, th, td ,a{
+  margin: 0px;
+  padding: 0px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol, ul {
+list-style: none;
+}
+a {
+text-decoration: none;
+color: inherit;
+
+}
+body {
+	overflow-x: hidden;
+    background-color: #F4F4F4;
+    font-family: Hiragino Kaku Gothic ProN,-apple-system,Segoe UI,Helvetica Neue,"メイリオ",meiryo,sans-serif;
+}
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+/************/
+/* フォントcss */
+/************/
+/*
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Kosugi Maru', sans-serif;
+}
+p,li,th,td,a {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+*/
+/*ここからホップアップ*/
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+	top:0;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+    /*動き*/
+	transition: all 0.3s;
+    /*
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+    */
+    -webkit-backdrop-filter: invert(100%);
+    backdrop-filter: blur(10px);
+    background-color: rgba(128, 128, 128, 0.31);
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+	opacity: 1;
+	z-index:9999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 9999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.g-nav-list{
+    position: relative;
+}
+.gohome,.goinsta{
+	position:fixed;
+    z-index: 100005;/*ボタンを最前面に*/
+	cursor: pointer;
+}
+.gohome{
+    right: 25px;
+	top:90px;
+}
+.goinsta{
+    right: 27px;
+    top:160px; 
+}
+/*ナビゲーション*/
+.box-menu{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 20000;
+}
+.color_bar{
+    height: 90px;
+    transition-duration: 0.25s;
+    margin: 10px;
+}
+.color_bar:hover{
+    height: 150px;
+    margin: 0px;
+}
+.color_bar:nth-child(odd){
+    background-color: #508CA4;
+}
+.color_bar:nth-child(even){
+    background-color: #CCA43B;
+}
+.box-menu a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.box-menu img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%, -46%);
+}
+.closebg{
+    z-index: 9999;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    height: 100vh;
+    width: 100vw;
+}
+/*リストのレイアウト設定*/
+
+.openbtn{
+	position:fixed;
+    z-index: 99999;/*ボタンを最前面に*/
+	top:20px;
+	right: 20px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 5px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #333;
+  	width: 40px;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:25px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:35px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 5px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40px;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 5px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40px;
+}
+/*ホップアップここまで*/
+
+/*-----------ここからヘッダーとフッダー-----------*/
+header {
+    height: 23vh;
+    background-color: #FFF;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 50px;
+    padding: 6.5vh;
+}
+
+
+.logo {
+    height: 120px;
+    background-color: rgb(130, 185, 166, 0);
+    left: 0px;
+    margin: 20px 0px 0px 20px;
+    z-index: 100;
+    position: absolute;
+}
+
+footer {
+    background-color: #FFF;
+    height: 350px;
+    padding-left: 70px;
+    display: flex;
+    color: #333;
+    position: relative;
+    z-index: 0;
+
+}
+
+.footer_1 {
+    padding: 50px 100px;
+}
+
+.footer_2 {
+    padding: 200px 0px 0px 510px;
+    position: absolute;
+    right: 10vw;
+    text-align: right;
+}
+
+footer li {
+    padding: 6px 5px;
+}
+
+.footer_2 a {
+    text-decoration: underline;
+    text-decoration-color: #333;
+}
+
+/*------------------------------*/

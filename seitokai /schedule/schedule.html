@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="/js/jquery-3.6.1.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="schedule.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+  </style>
+  <title>年間行事</title>
+</head>
+
+<body onload="changeDistance()" onload="centerElement()">
+  <a id="openModal" class="modal-open notscroll" onclick="return false;">
+    <div class="open_btn">？</div>
+  </a>
+  <section id="modalArea" class="modalArea modalArea_top">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modaal_frame">
+      <div class="modaal_width">
+        <div class="modaal_title">年間予定ページにようこそ</div>
+        <div class="modaal_h">
+          <p class="modaal_minititle">・このページでは学校、生徒会行事の年間行事予定を掲載しています。</p>
+          <ul>
+            <li>行事予定は随時更新していきます。</li>
+            <li>実際の行事と異なる場合があります。</li>
+          </ul>
+        </div>
+        <div class="modaal_color">
+          <p class="modaal_minititle">・それぞれのボックスの色は予定元を表します。</p>
+          <div class="modaal_color_box">
+            <div class="modaal_color_flex">
+              <div class="modaal_color_texts">
+                <p>聖祭関係　　→　<span class="modaal_color_text modaal_color_a">赤色</span></p>
+                <p>体育祭関係　→　<span class="modaal_color_text modaal_color_b">青色</span></p>
+              </div>
+              <div class="modaal_color_texts">
+                <p>生徒会関係　→　<span class="modaal_color_text modaal_color_c">緑色</span></p>
+                <p>学校関係　　→　<span class="modaal_color_text modaal_color_d">黃色</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" id="closeModalX" onclick="return false;">
+          <div class="modaal_jump">
+            <p>ページに進む</p>
+          </div>
+        </a>
+      </div>
+      <div class="modaal_attention">※このウィンドウはページ内のはてなマークから何度でも表示できます。</div>
+      <span id="closeModal" class="closeModal "></span>
+    </div>
+  </section>
+  <div class="openbtn"><span></span><span></span><span></span></div>
+  <nav id="g-nav">
+    <div id="g-nav-list">
+        <div class="box-menu">
+            <div class="color_bar"><a href="/article/article.html"><img src="/img/menu/Frame 1.svg"></a></div>
+            <div class="color_bar"><a href="/committee/committee.html"><img src="/img/menu/Frame 2.svg"></a></div>
+            <div class="color_bar"><a href="/schedule/schedule.html"><img src="/img/menu/Frame 3.svg"></a></div>
+            <div class="color_bar"><a href="/club/club.html"><img src="/img/menu/Frame 4.svg"></a></div>
+            <div class="color_bar"><a href="/form/form.html"><img src="/img/menu/Frame 5.svg"></a></div>
+            <div class="color_bar"><a href="https://www.instagram.com/sakuchoseihighschool/"><img src="/img/menu/Frame 6.svg"></a></div>
+        </div>
+        <a href="../index.html" class="gohome"><img src="/img/menu/home.svg" height="40px" width="40px"></a>
+        <a href="https://www.instagram.com/sakuchoseihighschool/" class="goinsta"><img src="/img/menu/instagram.svg" height="35px" width="35px"></a>
+        <div class="closebg"></div>
+    </div>
+</nav>
+  <a href="../index.html"><img src="/img/big-logo.png" class="logo"></a>
+  <header id="header">
+    <div class="title">年間行事予定</div>
+  </header>
+  <main>
+    <div class="without_bar">
+      <div class="meter_l">
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="eventboxes">
+        <div class="eventbox">
+          <div class="month">
+            <p>04</p>
+            <p>APR</p>
+          </div>
+          <div class="events">
+            <div class="event event_a">
+              <a href="#" id="openModal1" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_b">
+              <a href="#" id="openModal2" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_c">
+              <a href="#" id="openModal3" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>05</p>
+            <p>MAY</p>
+          </div>
+          <div class="events">
+            <div class="event event_a">
+              <a href="#" id="openModal4" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_b">
+              <a href="#" id="openModal5" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>06</p>
+            <p>JUN</p>
+          </div>
+          <div class="events">
+            <div class="event event_c">
+              <a href="#" id="openModal6" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_a">
+              <a href="#" id="openModal7" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_d">
+              <a href="#" id="openModal8" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>07</p>
+            <p>JUL</p>
+          </div>
+          <div class="events">
+            <div class="event event_d">
+              <a href="#" id="openModal9" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>08</p>
+            <p>AUG</p>
+          </div>
+          <div class="events">
+            <div class="event event_a">
+              <a href="#" id="openModal10" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_c">
+              <a href="#" id="openModal11" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_a">
+              <a href="#" id="openModal12" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>09</p>
+            <p>SEP</p>
+          </div>
+          <div class="events">
+            <div class="event event_c">
+              <a href="#" id="openModal13" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_d">
+              <a href="#" id="openModal14" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>10</p>
+            <p>OCT</p>
+          </div>
+          <div class="events">
+            <div class="event event_d">
+              <a href="#" id="openModal15" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_b">
+              <a href="#" id="openModal16" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>11</p>
+            <p>NOV</p>
+          </div>
+          <div class="events">
+            <div class="event event_a">
+              <a href="#" id="openModal17" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>12</p>
+            <p>DEC</p>
+          </div>
+          <div class="events">
+            <div class="event event_c">
+              <a href="#" id="openModal18" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_b">
+              <a href="#" id="openModal19" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_d">
+              <a href="#" id="openModal20" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>01</p>
+            <p>JAN</p>
+          </div>
+          <div class="events">
+            <div class="event event_b">
+              <a href="#" id="openModal21" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_a">
+              <a href="#" id="openModal22" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>02</p>
+            <p>FEB</p>
+          </div>
+          <div class="events">
+            <div class="event event_d">
+              <a href="#" id="openModal23" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="eventbox">
+          <div class="month">
+            <p>03</p>
+            <p>MAR</p>
+          </div>
+          <div class="events">
+            <div class="event event_c">
+              <a href="#" id="openModal24" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_b">
+              <a href="#" id="openModal25" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="event event_a">
+              <a href="#" id="openModal26" class="openModal" onclick="return false;">
+                <div class="box_width">
+                  <div class="box_front">
+                    <img src="img/icon_2.svg">
+                    <div class="box_title">第XX回 聖祭１日目</div>
+                  </div>
+                  <div class="box_text">
+                    文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="meter_r">
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="meter_box">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="bar_box">
+      <div class="bar_unit" id="bar_js">
+        <p>
+          <script>
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+
+            today = mm + '月' + dd + '日';
+            document.write(today);
+          </script>
+        </p>
+        <div></div>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <section id="modalArea1" class="modalArea">
+      <div id="modalBg1" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal1" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea2" class="modalArea">
+      <div id="modalBg2" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal2" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea3" class="modalArea">
+      <div id="modalBg3" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal3" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea4" class="modalArea">
+      <div id="modalBg4" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal4" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea5" class="modalArea">
+      <div id="modalBg5" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal5" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea6" class="modalArea">
+      <div id="modalBg6" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal6" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea7" class="modalArea">
+      <div id="modalBg7" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal7" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea8" class="modalArea">
+      <div id="modalBg8" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal8" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea9" class="modalArea">
+      <div id="modalBg9" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal9" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea10" class="modalArea">
+      <div id="modalBg10" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal10" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea11" class="modalArea">
+      <div id="modalBg11" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal11" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea12" class="modalArea">
+      <div id="modalBg12" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal12" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea13" class="modalArea">
+      <div id="modalBg13" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal13" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea14" class="modalArea">
+      <div id="modalBg14" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal14" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea15" class="modalArea">
+      <div id="modalBg15" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal15" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea16" class="modalArea">
+      <div id="modalBg16" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal16" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea17" class="modalArea">
+      <div id="modalBg17" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal17" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea18" class="modalArea">
+      <div id="modalBg18" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal18" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea19" class="modalArea">
+      <div id="modalBg19" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal19" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea20" class="modalArea">
+      <div id="modalBg20" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal20" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea21" class="modalArea">
+      <div id="modalBg21" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal21" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea22" class="modalArea">
+      <div id="modalBg22" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal22" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+
+    <section id="modalArea23" class="modalArea">
+      <div id="modalBg23" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_d">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_d">第１０回聖祭一日目</p>
+          <img src="img/Rectangle d.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal23" class="closeModal closeModal_color_d"></span>
+      </div>
+    </section>
+
+    <section id="modalArea24" class="modalArea">
+      <div id="modalBg24" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_c">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_c">第１０回聖祭一日目</p>
+          <img src="img/Rectangle c.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal24" class="closeModal closeModal_color_c"></span>
+      </div>
+    </section>
+
+    <section id="modalArea25" class="modalArea">
+      <div id="modalBg25" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_b">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_b">第１０回聖祭一日目</p>
+          <img src="img/Rectangle b.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal25" class="closeModal closeModal_color_b"></span>
+      </div>
+    </section>
+
+    <section id="modalArea26" class="modalArea">
+      <div id="modalBg26" class="modalBg"></div>
+      <div class="modalWrapper modalWrapper_color_a">
+        <div class="modalContents">
+          <p class="modalTitle modalTitle_color_a">第１０回聖祭一日目</p>
+          <img src="img/Rectangle a.png">
+          <p>
+            文化祭は、各学校や団体が自慢する文化やスキルを披露するイベントです。展示やステージパフォーマンスなどが行われ、多くの人が足を運びます。また、地域の文化や食べ物も楽しめるので、楽しみ方は様々です。ぜひ、近くの文化祭に足を運んでみましょう。
+          </p>
+        </div>
+        <span id="closeModal26" class="closeModal closeModal_color_a"></span>
+      </div>
+    </section>
+  </section>
+
+  <footer id="footer">
+    <div class="footer_1">
+      <ul>
+        <li><a href="/article/article.html">記事一覧</a></li>
+        <li><a href="/committee/committee.html">委員会</a></li>
+        <li><a href="/schedule/schedule.html">年間行事</a></li>
+        <li><a href="/club/club.html">部活動</a></li>
+        <li><a href="/form/form.html">投書箱</a></li>
+        <li><a href="https://www.instagram.com/sakuchoseihighschool/">生徒会運営Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer_2">
+      <ul>
+        <li>お問い合わせ <a href="#">執行部</a></li>
+        <li>制作-佐久長聖生徒会</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/js/jquery.cookie.js"></script>
+  <script src="schedule.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/particle.js"></script>
+</body>
+
+</html>
