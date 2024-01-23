@@ -235,7 +235,7 @@ footer {
 }
 
 .footer_2 {
-    padding: 200px 0px 0px 510px;
+    padding: 200px 0px 0px 0px;
     position: absolute;
     right: 10vw;
     text-align: right;
