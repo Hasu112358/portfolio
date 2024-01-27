@@ -466,9 +466,9 @@ header{
 }
 .item{
     height: 65px;
-    width: 23.5%;
+    width: 24%;
     background-color: #F4F4F4;
-    margin: 5px;
+    margin: 0.5%;
     font-size: 20px;
     color: #333;
 }
