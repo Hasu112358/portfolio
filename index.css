@@ -467,10 +467,10 @@ header{
 .item{
     height: 65px;
     width: 24%;
+    background-color: #F4F4F4;
     margin: 0.5%;
     font-size: 20px;
     color: #333;
-    background-color: #F4F4F4;
 }
 .item a {
     display: block;
